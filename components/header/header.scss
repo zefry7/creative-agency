@@ -1,0 +1,33 @@
+.header {
+    height: 570px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    &__content {
+        padding: 26px 98px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__name {
+        font-size: 20px;
+        color: white;
+    }
+    &__links {
+        margin-left: auto;
+        margin-right: 60px;
+        display: flex;
+        gap: 30px;
+        &-item {
+            color: white;
+        }
+    }
+    &__social {
+
+    }
+}

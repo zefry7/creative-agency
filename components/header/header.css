@@ -1,0 +1,34 @@
+.header {
+  height: 570px;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.header__content {
+  padding: 26px 98px;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__name {
+  font-size: 20px;
+  color: white;
+}
+.header__links {
+  margin-left: auto;
+  margin-right: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+.header__links-item {
+  color: white;
+}
