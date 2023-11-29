@@ -1,2 +1,5 @@
-@import url(./header/header.css);
-@import url(./intro/intro.css);
+@import "../public/css/mixins/adaptive";
+
+@import "header/_header";
+@import "intro/_intro";
+@import "project/_project";

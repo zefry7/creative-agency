@@ -84,6 +84,18 @@
           align-items: center;
   position: relative;
 }
+.intro__info::after {
+  content: "";
+  position: absolute;
+  top: -304px;
+  left: -123px;
+  z-index: -2;
+  display: inline-block;
+  height: 641px;
+  width: 641px;
+  border-radius: 641px;
+  background: #F5F5F5;
+}
 .intro__label {
   margin-bottom: 22px;
   font-weight: 500;
@@ -133,13 +145,11 @@
   color: white;
   background-color: black;
 }
-.intro__decor-circle {
-  position: absolute;
-  z-index: -2;
-  top: -304px;
-  left: -123px;
-  height: 641px;
-  width: 641px;
-  border-radius: 641px;
-  background: #F5F5F5;
+.intro__section-column {
+  padding: 42px 50px;
+  width: 304px;
+  height: 400px;
+}
+.intro__section-read {
+  display: none;
 }

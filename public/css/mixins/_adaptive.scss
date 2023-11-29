@@ -1,0 +1,40 @@
+$MAX-WIDTH: 1366;
+$MIN-WIDTH: 320;
+
+$MOBILE: 320;
+$TABLET: 768;
+$TABLET-L: 1024;
+$DESKTOP: 1280;
+
+$MOBILE_MEDIA: "screen and (max-width: #{$TABLET - 1})";
+$TABLET_MEDIA: "screen and (min-width: #{$TABLET}) and (max-width: #{$TABLET-L - 1}) and (orientation: landscape)";
+$TABLET-L_MEDIA: "screen and (min-width: #{$TABLET-L}) and (max-width: #{$DESKTOP - 1})";
+$DESKTOP_MEDIA: "screen and (min-width: #{$DESKTOP})";
+
+@mixin adap($prop, $d, $m) {
+    $r: $d - $m;
+    @media (min-width: #{$MAX-WIDTH + px}) {
+        #{$prop}: #{$d + px};
+    }
+
+    @media #{$DESKTOP_MEDIA} {
+        #{$prop}: calc(#{$m + px} + #{$r} * ((100vw - #{$TABLET-L + px}) / (#{$MAX-WIDTH} - #{$DESKTOP})));
+    }
+
+    @media #{$TABLET-L_MEDIA} {
+        #{$prop}: calc(#{$m + px} + #{$r} * ((100vw - #{$TABLET-L + px}) / (#{$DESKTOP} - #{$TABLET-L})));
+    }
+
+    @media #{$TABLET_MEDIA} {
+        #{$prop}: calc(#{$m + px} + #{$r} * ((100vw - #{$TABLET + px}) / (#{$TABLET-L} - #{$TABLET})));
+    }
+
+    @media #{$MOBILE_MEDIA} {
+        #{$prop}: calc(#{$m + px} + #{$r} * ((100vw - #{$MOBILE + px}) / (#{$TABLET} - #{$MOBILE})));
+    }
+
+    @media (max-width: #{$MIN-WIDTH + px}) {
+        #{$prop}: #{$m + px};
+    }
+}
+

@@ -1,4 +1,11 @@
-@import url(./mixins/null-style.css);
-@import url(./mixins/text-style.css);
-@import url(./mixins/adaptive.css);
-@import url(../../components/page.css);
+@import "mixins/_null-style";
+@import "mixins/_text-style";
+
+@import "../../components/page";
+
+
+.wrapper {
+    max-width: #{$MAX-WIDTH + px};
+    min-width: #{$MIN-WIDTH + px};
+    margin: 0 auto;
+}
