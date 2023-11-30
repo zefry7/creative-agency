@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+new Swiper('.swiper', {
   slidesPerView: "auto",
   autoplay: {
     delay: 5000,
@@ -9,5 +9,14 @@ const swiper = new Swiper('.swiper', {
   },
 
 });
+
+new Swiper('.values__swiper', {
+  slidesPerView: "auto",
+  autoplay: {
+    delay: 5000,
+  },
+
+});
+
 
 

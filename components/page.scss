@@ -1,5 +1,7 @@
 @import "../public/css/mixins/adaptive";
 
-@import "header/_header";
-@import "intro/_intro";
-@import "project/_project";
+@import "header/header";
+@import "intro/intro";
+@import "project/project";
+@import "values/values";
+@import "info/info";
